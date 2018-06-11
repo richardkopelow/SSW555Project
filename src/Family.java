@@ -1,4 +1,4 @@
-import java.sql.Date;
+import java.util.Date;
 import java.text.Format;
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -35,7 +35,9 @@ public class Family
         {
             sb.append("N/A");
         }
-        return String.format(""
-            , ID, MarrageDate, DivorceDate, HusbandID, people.get(HusbandID).Name, WifeID, people.get(WifeID).Name, );
+        Person husband =people.get(HusbandID);
+        Person wife = people.get(WifeID);
+        return String.format("|%6s|%15s|%15s|%7s|%20s|%7s|%20s|%15s|"
+            , ID, MarrageDate, DivorceDate, HusbandID, husband.Name, WifeID, wife.Name, sb.toString());
     }
 }

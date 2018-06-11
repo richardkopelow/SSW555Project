@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;;
 
@@ -34,7 +35,9 @@ public class Person
 
     public String toString()
     {
-        return String.format("|%s\t|%s %s\t|%s\t|%s%\t|%d\t|%b\t|%s\t|%s\t|%s\t|",
-            ID,Name,Gender,Birthday,GetAge(),IsAlive(),DeathDay, Child, Spouse);
+        String birthString = Birthday==null?null:new SimpleDateFormat("dd-MMM-yyyy").format(Birthday);
+        String deathString = DeathDay==null?null:new SimpleDateFormat("dd-MMM-yyyy").format(DeathDay);
+        return String.format("|%6s|%20s|%5s|%15s|%6d|%6b|%15s|%8s|%8s|",
+            ID,Name,Gender,birthString,GetAge(),IsAlive(),deathString, Child, Spouse);
     }
 }
