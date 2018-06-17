@@ -23,7 +23,11 @@ public class Person
         if (Birthday==null) {
             return 0;
         }
+        
         Date today = new Date();
+        if (DeathDay != null && DeathDay.compareTo(today)<0) {
+            today = DeathDay;
+        }
         long diff = today.getTime() - Birthday.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) / 365;
     }
