@@ -29,7 +29,7 @@ public class Main {
         ArrayList<Entry> entries = new ArrayList<Entry>();
         ArrayList<GEDError> gedErrors =  new ArrayList<GEDError>();
 
-        int count = 0;
+        int count = 1;
         //Parse out the ged file
         String line = gedFile.readLine();
         while(line!=null)

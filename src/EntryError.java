@@ -7,6 +7,7 @@ public class EntryError extends GEDError
     public EntryError(int line, String tag, int level)
     {
         this.lineNumber = line;
+        this.tag = tag;
         this.level = level;
     }
 
