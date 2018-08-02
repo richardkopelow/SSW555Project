@@ -60,7 +60,7 @@ public class Main {
         //Develop Family map
         HashMap<String, Family> families = new HashMap<String, Family>();
         HashMap<String, Person> people = new HashMap<String, Person>();
-        Family workingFamily = new Family();
+        Family workingFamily = new Family(people);
         Person workingPerson = new Person();
         String stage2Type = "";
 
@@ -75,7 +75,7 @@ public class Main {
                         people.put(ent.Args, workingPerson);
                         break;
                     case "fam":
-                        workingFamily = new Family();
+                        workingFamily = new Family(people);
                         workingFamily.ID = ent.Args;
                         families.put(ent.Args, workingFamily);
                         break;
@@ -111,13 +111,13 @@ public class Main {
                         Date date = fmt.parse(ent.Args);
                         switch (stage2Type.toLowerCase()) {
                             case "birt":
-                                workingPerson.Birthday = date;
+                                workingPerson.SetBirthday(date);
                                 break;
                             case "deat":
-                                workingPerson.DeathDay = date;
+                                workingPerson.SetDeathday(date);
                                 break;
                             case "marr":
-                                workingFamily.MarrageDate = date;
+                                workingFamily.SetMarrageDate(date);
                                 break;
                             case "div":
                                 workingFamily.DivorceDate = date;
@@ -133,7 +133,7 @@ public class Main {
             }
             catch (Exception e)
             {
-                gedErrors.add(new GEDError("Error on line " + ent.LineNumber));
+                gedErrors.add(new GEDError("Error with line " + ent.LineNumber + ": " + e.getMessage()));
             }
         }
         System.out.println(String.format("|%6s|%20s|%5s|%15s|%6s|%6s|%15s|%8s|%8s|",

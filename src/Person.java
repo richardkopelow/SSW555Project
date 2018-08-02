@@ -7,8 +7,8 @@ public class Person
     public String ID;
     public String Name;
     public String Gender;
-    public Date Birthday;
-    public Date DeathDay;
+    private Date Birthday;
+    private Date DeathDay;
     public String Child;
     public String Spouse;
 
@@ -30,6 +30,34 @@ public class Person
         }
         long diff = today.getTime() - Birthday.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) / 365;
+    }
+
+    public Date GetBirthday()
+    {
+        return Birthday;
+    }
+
+    public void SetBirthday(Date date) throws Exception
+    {
+        if (DeathDay!=null&&DeathDay.compareTo(date)<0)
+        {
+            throw new Exception("Person can't be born after death.");
+        }
+        Birthday = date;
+    }
+
+    public Date GetDeathday()
+    {
+        return DeathDay;
+    }
+
+    public void SetDeathday(Date date) throws Exception
+    {
+        if (Birthday!=null&&Birthday.compareTo(date)>0)
+        {
+            throw new Exception("Person can't die before birth.");
+        }
+        DeathDay = date;
     }
 
     public boolean IsAlive()

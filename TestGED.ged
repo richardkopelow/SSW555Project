@@ -93,6 +93,8 @@
 1 FAMS @F4@
 1 FAMS @F6@
 1 FAMC @F3@
+1 BIRT
+2 Date 2 Mar 1940
 0 @I10@ INDI
 1 NAME Julia /Danner/
 2 GIVN Julia
@@ -140,6 +142,8 @@
 2 _MARNM Danner
 1 SEX F
 1 FAMS @F6@
+1 BIRT
+2 Date 4 Feb 1939
 0 @F1@ FAM
 1 HUSB @I1@
 1 WIFE @I2@
@@ -172,4 +176,16 @@
 1 WIFE @I15@
 1 CHIL @I14@
 1 _CURRENT N
+1 MARR
+2 Date 1 Jan 1900
 0 TRLR
+0 @I16@ INDI
+1 NAME buck /rod/
+2 GIVN buck
+2 SURN rod
+2 _MARNM rod
+1 SEX M
+1 BIRT
+2 DATE 8 APR 2000
+1 DEAT Y
+2 DATE 6 OCT 1999
