@@ -101,6 +101,9 @@ public class Main {
                 case "date":
                     DateFormat fmt = new SimpleDateFormat("dd MMM yyyy");
                     Date date = fmt.parse(ent.Args);
+                    if (date.compareTo(new Date()) > 0) {
+                        throw new Exception("Dates can't be in the future");
+                    }
                     switch (stage2Type.toLowerCase()) {
                     case "birt":
                         workingPerson.SetBirthday(date);
