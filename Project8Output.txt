@@ -1,3 +1,6 @@
+The important ones for this release are at the end. The error for the age, and the error for the date being in the future.
+
+
 testged.ged
 |    ID|                Name|Gender|          Birth|   Age| Alive|          Death|   Child|  Spouse|
 |  @I1@|     Tucker /Mayhew/|    M|    15-Dec-1961|    56|  true|           null|    @F2@|    @F1@|
