@@ -138,8 +138,8 @@ public class Main {
             }
         }
 
-        System.out.println(String.format("|%6s|%15s|%15s|%7s|%20s|%7s|%20s|%15s|", "ID", "Marrage", "Divorce",
-                "Husband", "Husband Name", "Wife", "Wife Name", "Children"));
+        System.out.println(String.format("|%6s|%15s|%15s|%7s|%20s|%7s|%20s|%15s|%15s|", "ID", "Marrage", "Divorce",
+                "Husband", "Husband Name", "Wife", "Wife Name", "Children", "Large Age Gap"));
         for (Family family : families.values()) {
             System.out.println(family.Print(people));
         }

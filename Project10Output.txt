@@ -1,0 +1,99 @@
+I added an cleaned up the charts I already had from Project 2 to display dead individuals and large age gaps in marriage, Why reinvent the wheel.
+The "Alive" column showed X's for dead individuals. There is a new column in the family print out to display large age gaps.
+
+testged.ged
+|    ID|                Name|Gender|          Birth|   Age| Alive|          Death|   Child|  Spouse|
+|  @I1@|     Tucker /Mayhew/|    M|    15-Dec-2011|     6|     Y|              -|    @F2@|    @F1@|
+|  @I3@|     Darril /Mayhew/|    M|    04-May-1993|    25|     Y|              -|    @F1@|     N/A|
+|  @I2@|       Jane /Danner/|    F|    13-Nov-1960|    57|     Y|              -|    @F3@|    @F1@|
+|  @I5@|       Mabe /Jesser/|    F|              -|    -1|     Y|              -|     N/A|    @F2@|
+|  @I4@|     Tucker /Mayhew/|    M|              -|    -1|     Y|              -|     N/A|    @F2@|
+|  @I7@|        Mary /Mavis/|    F|    08-Jun-1930|    69|     X|    20-Jan-2000|     N/A|    @F3@|
+|  @I6@|  Archibald /Danner/|    M|    08-Apr-1932|    67|     X|    06-Oct-1999|     N/A|    @F3@|
+|  @I9@|  Archibald /Danner/|    M|    02-Mar-1940|    78|     Y|              -|    @F3@|    @F6@|
+|  @I8@|        Amy /Mayhew/|    F|              -|    -1|     Y|              -|    @F2@|     N/A|
+| @I11@|      Frank /Tarrin/|    M|              -|    -1|     Y|              -|     N/A|    @F5@|
+| @I12@|    Delilah /Renara/|    F|              -|    -1|     Y|              -|     N/A|    @F4@|
+| @I13@|     Thomas /Danner/|    M|              -|    -1|     Y|              -|    @F4@|     N/A|
+| @I14@|      Sarah /Danner/|    F|    06-Aug-2005|    13|     Y|              -|    @F6@|     N/A|
+| @I15@|   Meredith /Jacobs/|    F|    04-Feb-1939|    79|     Y|              -|     N/A|    @F6@|
+| @I16@|          buck /rod/|    M|    08-Apr-2000|    18|     Y|              -|     N/A|     N/A|
+| @I10@|      Julia /Danner/|    F|              -|    -1|     Y|              -|    @F3@|    @F5@|
+|    ID|        Marrage|        Divorce|Husband|        Husband Name|   Wife|           Wife Name|       Children|  Large Age Gap|
+|  @F2@|              -|              -|   @I4@|     Tucker /Mayhew/|   @I5@|       Mabe /Jesser/|    {'@I1@',''}|              Y|
+|  @F1@|              -|              -|   @I1@|     Tucker /Mayhew/|   @I2@|       Jane /Danner/|       {'@I3@'}|              Y|
+|  @F4@|              -|              -|   @I9@|  Archibald /Danner/|  @I12@|    Delilah /Renara/|      {'@I13@'}|              Y|
+|  @F3@|              -|              -|   @I6@|  Archibald /Danner/|   @I7@|        Mary /Mavis/| {'@I2@','',''}|              X|
+|  @F6@|    01-Jan-1900|              -|   @I9@|  Archibald /Danner/|  @I15@|   Meredith /Jacobs/|      {'@I14@'}|              X|
+|  @F5@|              -|              -|  @I11@|      Frank /Tarrin/|  @I10@|      Julia /Danner/|            N/A|              Y|
+
+Errors:
+Error at line 3: Tag "SOUR" is not valid at level 1
+Error at line 4: Tag "WWW" is not valid at level 2
+Error at line 5: Tag "FILE" is not valid at level 1
+Error at line 6: Tag "DATE" is not valid at level 1
+Error at line 7: Tag "DEST" is not valid at level 1
+Error at line 8: Tag "GEDC" is not valid at level 1
+Error at line 9: Tag "VERS" is not valid at level 2
+Error at line 10: Tag "FORM" is not valid at level 2
+Error at line 11: Tag "SUBM" is not valid at level 1
+Error at line 12: Tag "NAME" is not valid at level 2
+Error at line 13: Tag "SUBN" is not valid at level 1
+Error at line 14: Tag "CHAR" is not valid at level 1
+Error at line 17: Tag "GIVN" is not valid at level 2
+Error at line 18: Tag "SURN" is not valid at level 2
+Error at line 19: Tag "_MARNM" is not valid at level 2
+Error at line 27: Tag "GIVN" is not valid at level 2
+Error at line 28: Tag "SURN" is not valid at level 2
+Error at line 29: Tag "_MARNM" is not valid at level 2
+Error at line 37: Tag "GIVN" is not valid at level 2
+Error at line 38: Tag "SURN" is not valid at level 2
+Error at line 39: Tag "_MARNM" is not valid at level 2
+Error at line 46: Tag "GIVN" is not valid at level 2
+Error at line 47: Tag "SURN" is not valid at level 2
+Error at line 48: Tag "_MARNM" is not valid at level 2
+Error at line 53: Tag "GIVN" is not valid at level 2
+Error at line 54: Tag "SURN" is not valid at level 2
+Error at line 55: Tag "_MARNM" is not valid at level 2
+Error at line 60: Tag "GIVN" is not valid at level 2
+Error at line 61: Tag "SURN" is not valid at level 2
+Error at line 62: Tag "_MARNM" is not valid at level 2
+Error at line 71: Tag "GIVN" is not valid at level 2
+Error at line 72: Tag "SURN" is not valid at level 2
+Error at line 73: Tag "_MARNM" is not valid at level 2
+Error at line 82: Tag "GIVN" is not valid at level 2
+Error at line 83: Tag "SURN" is not valid at level 2
+Error at line 84: Tag "_MARNM" is not valid at level 2
+Error at line 89: Tag "GIVN" is not valid at level 2
+Error at line 90: Tag "SURN" is not valid at level 2
+Error at line 91: Tag "_MARNM" is not valid at level 2
+Error at line 100: Tag "GIVN" is not valid at level 2
+Error at line 101: Tag "SURN" is not valid at level 2
+Error at line 102: Tag "_MARNM" is not valid at level 2
+Error at line 108: Tag "GIVN" is not valid at level 2
+Error at line 109: Tag "SURN" is not valid at level 2
+Error at line 110: Tag "_MARNM" is not valid at level 2
+Error at line 115: Tag "GIVN" is not valid at level 2
+Error at line 116: Tag "SURN" is not valid at level 2
+Error at line 117: Tag "_MARNM" is not valid at level 2
+Error at line 122: Tag "GIVN" is not valid at level 2
+Error at line 123: Tag "SURN" is not valid at level 2
+Error at line 124: Tag "_MARNM" is not valid at level 2
+Error at line 131: Tag "GIVN" is not valid at level 2
+Error at line 132: Tag "SURN" is not valid at level 2
+Error at line 133: Tag "_MARNM" is not valid at level 2
+Error at line 140: Tag "GIVN" is not valid at level 2
+Error at line 141: Tag "SURN" is not valid at level 2
+Error at line 142: Tag "_MARNM" is not valid at level 2
+Error at line 151: Tag "_CURRENT" is not valid at level 1
+Error at line 157: Tag "_CURRENT" is not valid at level 1
+Error at line 164: Tag "_CURRENT" is not valid at level 1
+Error at line 169: Tag "_CURRENT" is not valid at level 1
+Error at line 173: Tag "_CURRENT" is not valid at level 1
+Error at line 178: Tag "_CURRENT" is not valid at level 1
+Error at line 184: Tag "GIVN" is not valid at level 2
+Error at line 185: Tag "SURN" is not valid at level 2
+Error at line 186: Tag "_MARNM" is not valid at level 2
+Error with line 127: Dates can't be in the future
+Error with line 180: Husband can't marry before birth.
+Error with line 191: Person can't die before birth.
