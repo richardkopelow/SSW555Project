@@ -62,9 +62,9 @@ public class Person {
     }
 
     public String toString() {
-        String birthString = Birthday == null ? null : new SimpleDateFormat("dd-MMM-yyyy").format(Birthday);
-        String deathString = DeathDay == null ? null : new SimpleDateFormat("dd-MMM-yyyy").format(DeathDay);
-        return String.format("|%6s|%20s|%5s|%15s|%6d|%6b|%15s|%8s|%8s|", ID, Name, Gender, birthString, GetAge(),
-                IsAlive(), deathString, Child, Spouse);
+        String birthString = Birthday == null ? "-" : new SimpleDateFormat("dd-MMM-yyyy").format(Birthday);
+        String deathString = DeathDay == null ? "-" : new SimpleDateFormat("dd-MMM-yyyy").format(DeathDay);
+        return String.format("|%6s|%20s|%5s|%15s|%6d|%6s|%15s|%8s|%8s|", ID, Name, Gender, birthString, GetAge(),
+                IsAlive() ? "Y" : "X", deathString, Child, Spouse);
     }
 }
